@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#173b2a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Los Tantos" />
+  <title>Los Tantos</title>
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" />
+
+  <style>
+    :root {
+      color-scheme: light;
+      --cream: #f3e2b8;
+      --cream-light: #fbf0d1;
+      --paper-line: rgba(55, 101, 88, .13);
+      --paper-margin: rgba(142, 55, 39, .55);
+      --green: #173b2a;
+      --green-2: #24523b;
+      --burgundy: #8e3727;
+      --ink: #213129;
+      --muted: #6f7063;
+      --shadow: rgba(48, 39, 24, .16);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #d8ccb1;
+      color: var(--ink);
+      overscroll-behavior: none;
+    }
+
+    button, input, select { font: inherit; }
+    button { cursor: pointer; touch-action: manipulation; }
+    .screen { display: none; }
+    .screen.active { display: flex; }
+
+    /* ---------------- CONFIGURACIÓN ---------------- */
+    #setupScreen {
+      min-height: 100dvh;
+      padding:
+        calc(18px + env(safe-area-inset-top))
+        max(14px, env(safe-area-inset-right))
+        calc(18px + env(safe-area-inset-bottom))
+        max(14px, env(safe-area-inset-left));
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 15% 12%, rgba(255,255,255,.30), transparent 25%),
+        linear-gradient(140deg, #cbbd9f, #e7dcc5 48%, #c9b99a);
+    }
+
+    .notebook {
+      position: relative;
+      width: min(680px, 100%);
+      border: 5px solid var(--green);
+      border-radius: 30px;
+      padding: 30px 24px 24px 70px;
+      overflow: hidden;
+      background-color: var(--cream-light);
+      background-image:
+        linear-gradient(var(--paper-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--paper-line) 1px, transparent 1px),
+        radial-gradient(circle at 20% 10%, rgba(138, 99, 53, .08), transparent 20%),
+        radial-gradient(circle at 80% 75%, rgba(138, 99, 53, .07), transparent 28%);
+      background-size: 24px 24px, 24px 24px, auto, auto;
+      box-shadow: 0 20px 50px var(--shadow), inset 0 0 30px rgba(106, 79, 42, .07);
+    }
+
+    .notebook::before {
+      content: "";
+      position: absolute;
+      left: 51px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--paper-margin);
+      box-shadow: 4px 0 0 rgba(142, 55, 39, .08);
+    }
+
+    .rings {
+      position: absolute;
+      left: 4px;
+      top: 38px;
+      bottom: 38px;
+      width: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      pointer-events: none;
+    }
+
+    .ring {
+      position: relative;
+      width: 40px;
+      height: 18px;
+      border: 5px solid #183427;
+      border-left: 0;
+      border-radius: 0 14px 14px 0;
+      filter: drop-shadow(1px 2px 1px rgba(0,0,0,.22));
+    }
+
+    .ring::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #c9aa69;
+      border: 2px solid #7d683f;
+      transform: translate(50%, -50%);
+      z-index: -1;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 14px;
+    }
+
+    .brand-icon {
+      width: 76px;
+      height: 76px;
+      flex: 0 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px rgba(54, 45, 28, .18);
+    }
+
+    .brand-copy { min-width: 0; }
+
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-family: "Marker Felt", "Bradley Hand", "Segoe Print", cursive;
+      font-size: clamp(2.65rem, 9vw, 4.6rem);
+      font-weight: 700;
+      line-height: .88;
+      letter-spacing: -.055em;
+      transform: rotate(-1deg);
+    }
+
+    .tagline {
+      margin: 10px 0 0;
+      color: var(--burgundy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: clamp(.95rem, 3.4vw, 1.12rem);
+    }
+
+    .divider {
+      width: 100%;
+      height: 8px;
+      margin: 8px 0 20px;
+      border-top: 3px solid var(--green);
+      transform: rotate(-.4deg);
+      opacity: .9;
+    }
+
+    .row-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .row-top label,
+    .section-label {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+    }
+
+    select {
+      min-width: 84px;
+      border: 2px solid rgba(23, 59, 42, .48);
+      border-radius: 10px;
+      padding: 8px 34px 8px 12px;
+      background: rgba(255, 250, 232, .72);
+      color: var(--ink);
+      font-weight: 700;
+      outline: none;
+    }
+
+    #playersForm {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .player-row {
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+    }
+
+    .player-row input[type="color"] {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 3px solid rgba(23, 59, 42, .65);
+      border-radius: 50%;
+      overflow: hidden;
+      background: transparent;
+      box-shadow: 0 2px 5px rgba(54,45,28,.12);
+    }
+
+    .player-row input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+    .player-row input[type="color"]::-webkit-color-swatch { border: 0; border-radius: 50%; }
+
+    .player-row input[type="text"] {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      border-bottom: 2px solid rgba(23, 59, 42, .35);
+      border-radius: 0;
+      padding: 10px 4px 8px;
+      outline: none;
+      color: var(--ink);
+      background: rgba(255,255,255,.14);
+      font-family: "Marker Felt", "Bradley Hand", "Segoe Print", -apple-system, sans-serif;
+      font-size: 1.08rem;
+    }
+
+    .player-row input[type="text"]::placeholder { color: rgba(33,49,41,.48); }
+    .player-row input[type="text"]:focus { border-bottom-color: var(--green); }
+
+    .start-btn {
+      width: 100%;
+      margin-top: 22px;
+      border: 0;
+      border-radius: 13px;
+      padding: 15px 18px;
+      color: #fff8df;
+      background: var(--green);
+      box-shadow: 0 5px 0 #0d291c, 0 8px 16px rgba(36, 49, 37, .17);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 800;
+      font-size: 1.12rem;
+      letter-spacing: .02em;
+    }
+
+    .start-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #0d291c; }
+
+    .hint {
+      margin: 16px 2px 0;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.42;
+    }
+
+    /* ---------------- PARTIDA ---------------- */
+    #gameScreen {
+      position: fixed;
+      inset: 0;
+      min-height: 100dvh;
+      overflow: hidden;
+      flex-direction: column;
+      background: var(--green);
+    }
+
+    #gameGrid {
+      flex: 1;
+      display: grid;
+      width: 100%;
+      min-height: 0;
+      gap: 3px;
+      background: #102d20;
+      padding:
+        env(safe-area-inset-top)
+        env(safe-area-inset-right)
+        0
+        env(safe-area-inset-left);
+    }
+
+    .player-card {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 10px;
+      text-align: center;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      isolation: isolate;
+    }
+
+    .player-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+        radial-gradient(circle at 15% 18%, rgba(255,255,255,.10), transparent 28%),
+        radial-gradient(circle at 84% 76%, rgba(0,0,0,.09), transparent 35%);
+      background-size: 22px 22px, 22px 22px, auto, auto;
+      mix-blend-mode: soft-light;
+    }
+
+    .player-card::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border: 1px solid currentColor;
+      border-radius: 13px;
+      opacity: .16;
+      pointer-events: none;
+    }
+
+    .player-name {
+      max-width: 90%;
+      padding: 5px 11px 6px;
+      border-radius: 999px;
+      background: rgba(248, 236, 203, .87);
+      color: #173226;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1rem, 5vw, 1.85rem);
+      font-weight: 800;
+      line-height: 1.05;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .score {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4.2rem, 19vw, 9.5rem);
+      font-weight: 700;
+      line-height: .93;
+      letter-spacing: -.065em;
+      margin: 9px 0 15px;
+      font-variant-numeric: tabular-nums lining-nums;
+      text-shadow: 0 2px 1px rgba(0,0,0,.13);
+    }
+
+    .score-delta {
+      display: inline-block;
+      margin-left: .16em;
+      font-size: .34em;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      vertical-align: .32em;
+      opacity: .88;
+      white-space: nowrap;
+    }
+
+    .score-delta:empty { display: none; }
+
+    .score-controls {
+      display: flex;
+      gap: 12px;
+      z-index: 2;
+    }
+
+    .score-btn {
+      width: clamp(46px, 13vw, 62px);
+      height: clamp(46px, 13vw, 62px);
+      display: grid;
+      place-items: center;
+      border: 2px solid rgba(23, 50, 38, .46);
+      border-radius: 50%;
+      background: rgba(248, 236, 203, .93);
+      color: #173226;
+      box-shadow: 0 3px 8px rgba(0,0,0,.16);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.6rem, 6vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .score-btn:active { transform: scale(.93); }
+    .player-card:active { filter: brightness(.96); }
+
+    .game-toolbar {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding:
+        9px
+        max(12px, env(safe-area-inset-right))
+        calc(9px + env(safe-area-inset-bottom))
+        max(12px, env(safe-area-inset-left));
+      background: var(--green);
+      box-shadow: 0 -2px 10px rgba(0,0,0,.14);
+    }
+
+    .toolbar-mark {
+      display: none;
+      color: #edd9aa;
+      font-family: "Marker Felt", "Bradley Hand", cursive;
+      opacity: .82;
+    }
+
+    .toolbar-btn {
+      border: 1px solid rgba(243, 226, 184, .46);
+      background: rgba(243, 226, 184, .10);
+      color: #fff3cf;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    @media (min-width: 650px) {
+      .toolbar-mark { display: block; margin-right: auto; }
+      .game-toolbar::after { content: ""; margin-left: auto; width: 82px; }
+    }
+
+    @media (max-width: 440px) {
+      .notebook { padding: 24px 16px 20px 58px; border-width: 4px; }
+      .notebook::before { left: 42px; }
+      .rings { left: 1px; width: 40px; }
+      .ring { width: 33px; height: 16px; border-width: 4px; }
+      .brand { gap: 11px; }
+      .brand-icon { width: 62px; height: 62px; border-radius: 15px; }
+      .row-top { margin-top: 2px; }
+    }
+
+    @media (orientation: landscape) and (max-height: 560px) {
+      .score { font-size: clamp(2.8rem, 14vh, 6.2rem); margin: 3px 0 6px; }
+      .player-name { font-size: clamp(.9rem, 3.8vh, 1.3rem); padding: 3px 9px 4px; }
+      .score-btn { width: 39px; height: 39px; font-size: 1.45rem; }
+      .player-card { padding: 6px; }
+      .player-card::after { inset: 5px; }
+      .game-toolbar { padding-top: 5px; padding-bottom: calc(5px + env(safe-area-inset-bottom)); }
+      .toolbar-btn { padding: 6px 11px; font-size: .78rem; }
+    }
+  </style>
+</head>
+<body>
+  <main id="setupScreen" class="screen active" aria-label="Configurar partida">
+    <section class="notebook">
+      <div class="rings" aria-hidden="true">
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+        <span class="ring"></span>
+      </div>
+
+      <header class="brand">
+        <img class="brand-icon" src="icons/apple-touch-icon.png" alt="" aria-hidden="true" />
+        <div class="brand-copy">
+          <h1>Los Tantos</h1>
+          <p class="tagline">La cuenta de toda la vida.</p>
+        </div>
+      </header>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="row-top">
+        <label for="playerCount">¿Cuántos jugamos?</label>
+        <select id="playerCount" aria-label="Número de participantes">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+
+      <div class="section-label">Apunta los nombres</div>
+      <div id="playersForm"></div>
+
+      <button id="startBtn" class="start-btn" type="button">Empezar la partida</button>
+      <p class="hint">Toca la zona grande de una persona para apuntarle un tanto. Los botones pequeños sirven para sumar o restar.</p>
+    </section>
+  </main>
+
+  <main id="gameScreen" class="screen" aria-label="Partida">
+    <div id="gameGrid"></div>
+    <div class="game-toolbar">
+      <span class="toolbar-mark">Los Tantos · ||||̸</span>
+      <button id="resetBtn" class="toolbar-btn" type="button">Todos a cero</button>
+      <button id="newGameBtn" class="toolbar-btn" type="button">Nueva partida</button>
+    </div>
+  </main>
+
+  <script>
+    const palette = [
+      '#315f8a', // azul apagado
+      '#a64232', // rojo ladrillo
+      '#4f713d', // verde oliva
+      '#c68c2e', // mostaza
+      '#70577d', // ciruela
+      '#33787b', // verde azulado
+      '#a95668', // rosa viejo
+      '#59635d'  // gris verdoso
+    ];
+
+    const CONFIG_KEY = 'los-tantos-config-v1';
+    const DELTA_VISIBLE_MS = 5000;
+
+    const setupScreen = document.getElementById('setupScreen');
+    const gameScreen = document.getElementById('gameScreen');
+    const playerCount = document.getElementById('playerCount');
+    const playersForm = document.getElementById('playersForm');
+    const startBtn = document.getElementById('startBtn');
+    const gameGrid = document.getElementById('gameGrid');
+    const resetBtn = document.getElementById('resetBtn');
+    const newGameBtn = document.getElementById('newGameBtn');
+
+    let players = [];
+    const deltaTimers = new Map();
+
+    function loadSavedConfig() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(CONFIG_KEY));
+        if (!saved || !Array.isArray(saved.names)) return null;
+        const count = Math.min(8, Math.max(2, Number(saved.count) || 4));
+        return { count, names: saved.names.slice(0, count) };
+      } catch {
+        return null;
+      }
+    }
+
+    function saveConfig() {
+      const rows = [...playersForm.querySelectorAll('.player-row')];
+      const names = rows.map(row => row.querySelector('input[type="text"]').value.trim());
+      try {
+        localStorage.setItem(CONFIG_KEY, JSON.stringify({
+          count: Number(playerCount.value),
+          names
+        }));
+      } catch {
+        // Si el almacenamiento local no está disponible, la app sigue funcionando.
+      }
+    }
+
+    function renderPlayerInputs(preferredNames = null) {
+      const count = Number(playerCount.value);
+      const previous = [...playersForm.querySelectorAll('.player-row')].map(row => ({
+        name: row.querySelector('input[type="text"]').value,
+        color: row.querySelector('input[type="color"]').value
+      }));
+
+      playersForm.innerHTML = '';
+
+      for (let i = 0; i < count; i++) {
+        const row = document.createElement('div');
+        row.className = 'player-row';
+
+        const color = document.createElement('input');
+        color.type = 'color';
+        color.value = previous[i]?.color || palette[i % palette.length];
+        color.setAttribute('aria-label', `Color de ${previous[i]?.name || preferredNames?.[i] || `jugador ${i + 1}`}`);
+
+        const name = document.createElement('input');
+        name.type = 'text';
+        name.maxLength = 18;
+        name.placeholder = `Jugador ${i + 1}`;
+        name.value = previous[i]?.name ?? preferredNames?.[i] ?? '';
+        name.autocomplete = 'off';
+        name.enterKeyHint = i === count - 1 ? 'done' : 'next';
+        name.setAttribute('aria-label', `Nombre del jugador ${i + 1}`);
+
+        row.append(color, name);
+        playersForm.appendChild(row);
+      }
+    }
+
+    function textColorFor(hex) {
+      const raw = hex.replace('#', '');
+      const r = parseInt(raw.slice(0, 2), 16);
+      const g = parseInt(raw.slice(2, 4), 16);
+      const b = parseInt(raw.slice(4, 6), 16);
+      const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+      return luminance > 0.65 ? '#173226' : '#fff6dc';
+    }
+
+    function chooseGrid(count) {
+      const portrait = window.innerHeight >= window.innerWidth;
+
+      if (portrait) {
+        if (count === 2) return { cols: 1, rows: 2 };
+        if (count <= 4) return { cols: 2, rows: 2 };
+        if (count <= 6) return { cols: 2, rows: 3 };
+        return { cols: 2, rows: 4 };
+      }
+
+      if (count === 2) return { cols: 2, rows: 1 };
+      if (count === 3) return { cols: 3, rows: 1 };
+      if (count === 4) return { cols: 2, rows: 2 };
+      if (count <= 6) return { cols: 3, rows: 2 };
+      return { cols: 4, rows: 2 };
+    }
+
+    function applyGrid() {
+      const { cols, rows } = chooseGrid(players.length);
+      gameGrid.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+      gameGrid.style.gridTemplateRows = `repeat(${rows}, minmax(0, 1fr))`;
+    }
+
+    function formatDelta(delta) {
+      if (!delta) return '';
+      return delta > 0 ? `(+${delta})` : `(${delta})`;
+    }
+
+    function clearDelta(index) {
+      if (!players[index]) return;
+      players[index].delta = 0;
+      const deltaEl = gameGrid.querySelector(`[data-delta-index="${index}"]`);
+      if (deltaEl) deltaEl.textContent = '';
+      deltaTimers.delete(index);
+    }
+
+    function scheduleDeltaReset(index) {
+      const previousTimer = deltaTimers.get(index);
+      if (previousTimer) clearTimeout(previousTimer);
+      const timer = setTimeout(() => clearDelta(index), DELTA_VISIBLE_MS);
+      deltaTimers.set(index, timer);
+    }
+
+    function cancelAllDeltaTimers() {
+      deltaTimers.forEach(timer => clearTimeout(timer));
+      deltaTimers.clear();
+    }
+
+    function updateScore(index, delta) {
+      players[index].score += delta;
+      players[index].delta += delta;
+
+      const scoreValueEl = gameGrid.querySelector(`[data-score-value-index="${index}"]`);
+      const deltaEl = gameGrid.querySelector(`[data-delta-index="${index}"]`);
+      const cardEl = gameGrid.querySelector(`[data-player-index="${index}"]`);
+
+      if (scoreValueEl) scoreValueEl.textContent = players[index].score;
+      if (deltaEl) deltaEl.textContent = formatDelta(players[index].delta);
+      if (cardEl) cardEl.setAttribute('aria-label', `${players[index].name}: ${players[index].score} tantos. Cambio reciente: ${players[index].delta}. Tocar para sumar uno.`);
+
+      scheduleDeltaReset(index);
+    }
+
+    function renderGame() {
+      gameGrid.innerHTML = '';
+      applyGrid();
+
+      players.forEach((player, index) => {
+        const card = document.createElement('section');
+        card.className = 'player-card';
+        card.dataset.playerIndex = index;
+        card.style.backgroundColor = player.color;
+        card.style.color = textColorFor(player.color);
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `${player.name}: ${player.score} tantos. Tocar para sumar uno.`);
+
+        const portrait = window.innerHeight >= window.innerWidth;
+        const isLast = index === players.length - 1;
+        const oddPortraitLayout = portrait && players.length >= 3 && players.length % 2 === 1;
+        const oddLandscapeLayout = !portrait && (players.length === 5 || players.length === 7);
+        if (isLast && (oddPortraitLayout || oddLandscapeLayout)) {
+          card.style.gridColumn = 'span 2';
+        }
+
+        const name = document.createElement('div');
+        name.className = 'player-name';
+        name.textContent = player.name;
+
+        const score = document.createElement('div');
+        score.className = 'score';
+        score.dataset.scoreIndex = index;
+
+        const scoreValue = document.createElement('span');
+        scoreValue.dataset.scoreValueIndex = index;
+        scoreValue.textContent = player.score;
+
+        const scoreDelta = document.createElement('span');
+        scoreDelta.className = 'score-delta';
+        scoreDelta.dataset.deltaIndex = index;
+        scoreDelta.textContent = formatDelta(player.delta);
+
+        score.append(scoreValue, scoreDelta);
+
+        const controls = document.createElement('div');
+        controls.className = 'score-controls';
+
+        const minus = document.createElement('button');
+        minus.className = 'score-btn';
+        minus.type = 'button';
+        minus.textContent = '−';
+        minus.setAttribute('aria-label', `Restar un tanto a ${player.name}`);
+
+        const plus = document.createElement('button');
+        plus.className = 'score-btn';
+        plus.type = 'button';
+        plus.textContent = '+';
+        plus.setAttribute('aria-label', `Sumar un tanto a ${player.name}`);
+
+        minus.addEventListener('click', event => {
+          event.stopPropagation();
+          updateScore(index, -1);
+        });
+
+        plus.addEventListener('click', event => {
+          event.stopPropagation();
+          updateScore(index, 1);
+        });
+
+        card.addEventListener('click', () => updateScore(index, 1));
+        card.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            updateScore(index, 1);
+          }
+        });
+
+        controls.append(minus, plus);
+        card.append(name, score, controls);
+        gameGrid.appendChild(card);
+      });
+    }
+
+    function startGame() {
+      const rows = [...playersForm.querySelectorAll('.player-row')];
+      players = rows.map((row, i) => ({
+        name: row.querySelector('input[type="text"]').value.trim() || `Jugador ${i + 1}`,
+        color: row.querySelector('input[type="color"]').value,
+        score: 0,
+        delta: 0
+      }));
+
+      saveConfig();
+      cancelAllDeltaTimers();
+      setupScreen.classList.remove('active');
+      gameScreen.classList.add('active');
+      renderGame();
+    }
+
+    function resetScores() {
+      if (!window.confirm('¿Ponemos todos los tantos a cero?')) return;
+      cancelAllDeltaTimers();
+      players.forEach(player => {
+        player.score = 0;
+        player.delta = 0;
+      });
+      renderGame();
+    }
+
+    function newGame() {
+      if (!window.confirm('¿Terminamos esta partida y preparamos otra?')) return;
+      cancelAllDeltaTimers();
+      gameScreen.classList.remove('active');
+      setupScreen.classList.add('active');
+    }
+
+    playerCount.addEventListener('change', () => {
+      renderPlayerInputs();
+      saveConfig();
+    });
+    playersForm.addEventListener('input', event => {
+      if (event.target.matches('input[type="text"]')) saveConfig();
+    });
+    startBtn.addEventListener('click', startGame);
+    resetBtn.addEventListener('click', resetScores);
+    newGameBtn.addEventListener('click', newGame);
+    window.addEventListener('resize', () => {
+      if (gameScreen.classList.contains('active')) renderGame();
+    });
+
+    const savedConfig = loadSavedConfig();
+    if (savedConfig) {
+      playerCount.value = String(savedConfig.count);
+      renderPlayerInputs(savedConfig.names);
+    } else {
+      renderPlayerInputs();
+    }
+
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
