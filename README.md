@@ -1,4 +1,6 @@
-# Los Tantos
+![Icono de Los Tantos](icons/icon-192.png "Title")
+
+# Los Tantos - La app para "apunta ahí!"
 
 **Los Tantos** es una pequeña aplicación web para llevar la puntuación de partidas de cartas, juegos de mesa o cualquier juego en el que varias personas o equipos necesiten ir sumando y restando puntos.
 
