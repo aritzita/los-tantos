@@ -56,6 +56,8 @@ Si no aparece la opción **Añadir a pantalla de inicio**, desplázate hasta el 
 
 El icono de **Los Tantos** aparecerá en la pantalla de inicio del iPhone.
 
+<img src="icons/apple-touch-icon.png" width="64">
+
 A partir de ese momento puedes abrirlo directamente desde ese icono. La aplicación se mostrará a pantalla completa, sin la interfaz habitual del navegador, de forma similar a una app instalada desde la App Store.
 
 ## Uso sin conexión
