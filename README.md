@@ -23,6 +23,9 @@ Está pensada para ser muy sencilla de usar, especialmente en partidas familiare
 - Las puntuaciones de una partida **no se guardan** al cerrar la aplicación.
 - Funciona como **PWA (Progressive Web App)** y puede utilizarse sin conexión después de haberse cargado correctamente al menos una vez.
 
+### Interfaz de usuario
+<table><tr><td><img src="img/screen-1-home.png" width="200"></td><td><img src="img/screen-2-partida.png" width="200"></td></tr></table>
+
 ## Instalación en iPhone como PWA
 
 Los Tantos no necesita instalarse desde la App Store. Puede añadirse directamente a la pantalla de inicio del iPhone y abrirse como una aplicación independiente.
