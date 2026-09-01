@@ -32,10 +32,10 @@ Los Tantos no necesita instalarse desde la App Store. Puede añadirse directamen
 
 ### 1. Abre Los Tantos en Safari
 
-En el iPhone, abre **Safari** y entra en la dirección web donde esté publicada la aplicación, por ejemplo:
+En el iPhone, abre **Safari** y entra en la dirección web donde está publicada la aplicación:
 
 ```text
-https://TU-USUARIO.github.io/los-tantos/
+https://aritzita.github.io/los-tantos/
 ```
 
 > Para instalarla como PWA es importante abrirla desde **Safari** y desde una dirección web publicada mediante HTTPS.
